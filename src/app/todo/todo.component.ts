@@ -37,4 +37,9 @@ export class TodoComponent {
     const colors = [ '#d1c4e9','#ffddf4','#fffdd0','#e0f7fa']; 
     return colors[index % colors.length];
   }
+
+  demoMethod()
+  {
+    
+  }
 }
