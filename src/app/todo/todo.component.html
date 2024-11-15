@@ -1,0 +1,41 @@
+<div class="main">
+    <div class="input-container container">
+        <form [formGroup]="taskForm">
+            <div class="row">
+                <div class="col-10">
+                    <mat-form-field class="task-field">
+                        <mat-label>Task Name</mat-label>
+                        <input type="email" matInput formControlName="taskName" placeholder="Ex. Drink Water">
+                    </mat-form-field>
+                </div>
+                <div class="col-2">
+                    <button mat-flat-button [disabled]="taskForm.get('taskName')?.hasError('required')" class="add-btn" (click)="addTask()">Add</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="tasks-container container">
+        <div class="row task-scroll-setting">
+            @for (task of tasks; track $index) {
+            <div class="col-12 mt-2">
+                <mat-card appearance="outlined" [ngStyle]="{'background-color':getBackgroundColor($index)}">
+                    <mat-card-content>
+                        <div class="row align-items-center">
+                            <div class="col-10">
+                                <p style="text-align: left;margin-top: 2%;">{{task}}</p>
+                            </div>
+                            <div class="col-2">
+                                <button mat-fab class="del-btn" (click)="deleteTask($index)">
+                                    <mat-icon>delete</mat-icon>
+                                </button>
+                            </div>
+                        </div>
+                </mat-card-content>
+                </mat-card>
+            </div>
+            }
+        </div>
+    </div>
+</div>
+
+

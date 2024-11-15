@@ -1,0 +1,36 @@
+.main
+{
+    padding: 60px;
+    text-align: center;
+    height: 100%;
+}
+
+.task-field
+{
+    width: 100%;
+}
+
+.add-btn
+{
+    width: 80%;
+    height: 70%;
+}
+
+.tasks-container
+{
+    //border: 1px solid black;
+    height: 90%;
+    padding: 30px;
+}
+
+.task-scroll-setting
+{
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.del-btn
+{
+    width: 50px;
+    height: 40px;
+}
