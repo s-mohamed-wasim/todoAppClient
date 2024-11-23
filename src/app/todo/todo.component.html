@@ -22,10 +22,10 @@
                     <mat-card-content>
                         <div class="row align-items-center">
                             <div class="col-10">
-                                <p style="text-align: left;margin-top: 2%;">{{task}}</p>
+                                <p style="text-align: left;margin-top: 2%;">{{task?.taskName}}</p>
                             </div>
                             <div class="col-2">
-                                <button mat-fab class="del-btn" (click)="deleteTask($index)">
+                                <button mat-fab class="del-btn" (click)="deleteTask(task?.taskId)">
                                     <mat-icon>delete</mat-icon>
                                 </button>
                             </div>
