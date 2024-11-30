@@ -72,4 +72,9 @@ export class TodoComponent implements OnInit {
     return colors[index % colors.length];
   }
 
+  demoMethod()
+  {
+    
+  }
+
 }
